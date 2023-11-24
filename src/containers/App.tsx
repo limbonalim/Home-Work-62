@@ -1,4 +1,6 @@
 import Home from './Home/Home.tsx';
+import About from './About/About.tsx';
+import Contacts from './Contacts/Contacts.tsx';
 
 
 const App = () => {
@@ -20,7 +22,11 @@ const App = () => {
           </div>
         </div>
       </nav>
-      <Home/>
+      <div className="container">
+        {/*<About/>*/}
+        <Contacts/>
+        {/*<Home/>*/}
+      </div>
     </>
   );
 };
