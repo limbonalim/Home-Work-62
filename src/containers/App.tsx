@@ -5,6 +5,9 @@ import Contacts from './Contacts/Contacts.tsx';
 import Toolbar from '../components/Toolbar/Toolbar.tsx';
 import {email, address, workTime, tel} from '../Constants.ts';
 import NotFound from './NotFound/NotFound.tsx';
+import Portfolio from './Portfolio/Portfolio.tsx';
+import BurgerApp from '../components/Burger/BurgerApp.tsx';
+import FindRingApp from '../components/FindRing/FindRingApp.tsx';
 
 
 const App = () => {
@@ -26,8 +29,15 @@ const App = () => {
             <Contacts address={address} email={email} tel={tel} workTime={workTime}/>
           )}/>
           <Route path="/portfolio" element={(
-            <h1>Portfolio</h1>
-          )}/>
+            <Portfolio/>
+          )}>
+            <Route path="burger" element={(
+              <BurgerApp/>
+            )}/>
+            <Route path="findRing" element={(
+              <FindRingApp/>
+            )}/>
+          </Route>
           <Route path="*" element={(
             <NotFound/>
           )}/>
