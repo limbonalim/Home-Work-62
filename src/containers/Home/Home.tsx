@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -44,7 +45,8 @@ const Home = () => {
         </li>
       </ul>
       <h2>Присоединяйтесь к нам в путешествии в будущее!</h2>
-      <p>Начните свой путь к инновациям с InnovateHub. <a href="#">Свяжитесь с нами</a> прямо сейчас и давайте сделаем
+      <p>Начните свой путь к инновациям с InnovateHub. <Link to="/contacts">Свяжитесь с нами</Link> прямо сейчас и
+        давайте сделаем
         будущее вместе!</p>
     </>
   );

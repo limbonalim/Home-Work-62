@@ -1,9 +1,10 @@
+import {Route, Routes} from 'react-router-dom';
 import Home from './Home/Home.tsx';
 import About from './About/About.tsx';
 import Contacts from './Contacts/Contacts.tsx';
 import Toolbar from '../components/Toolbar/Toolbar.tsx';
 import {email, address, workTime, tel} from '../Constants.ts';
-import {Route, Routes} from 'react-router-dom';
+import NotFound from './NotFound/NotFound.tsx';
 
 
 const App = () => {
@@ -23,6 +24,12 @@ const App = () => {
           )}/>
           <Route path="/contacts" element={(
             <Contacts address={address} email={email} tel={tel} workTime={workTime}/>
+          )}/>
+          <Route path="/portfolio" element={(
+            <h1>Portfolio</h1>
+          )}/>
+          <Route path="*" element={(
+            <NotFound/>
           )}/>
         </Routes>
       </main>
