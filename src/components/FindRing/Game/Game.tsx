@@ -11,7 +11,7 @@ interface Props {
 const Game: React.FC<Props> = ({items, showInner}) => {
   return (
     <div className="Game">
-      {items.map((item) => {
+      {items.map((item: Cell) => {
         return (
           <Square
             key={item.id}

@@ -22,7 +22,7 @@ const BurgerApp = () => {
     {name: 'Cheese', count: 1},
     {name: 'Salad', count: 1},
   ]);
-  const [total, setTotal] = useState(170);
+  const [total, setTotal] = useState<number>(170);
 
   const addIngredient = (name: string) => {
     let price = INGREDIENTS.reduce((acc, item) => {

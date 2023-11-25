@@ -19,9 +19,9 @@ const createItems = (numberOfCell: number = 36): Cell[] => {
   return items;
 };
 const FindRingApp = () => {
-  const [items, setItems] = useState(createItems());
-  const [score, setScore] = useState(0);
-  const [gameOver, setGameOver] = useState(false);
+  const [items, setItems] = useState<Cell[]>(createItems());
+  const [score, setScore] = useState<number>(0);
+  const [gameOver, setGameOver] = useState<boolean>(false);
 
   let squareList: React.ReactNode;
 

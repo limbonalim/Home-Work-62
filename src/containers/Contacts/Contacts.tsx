@@ -13,6 +13,7 @@ interface Props {
 
 
 const Contacts: React.FC<Props> = ({tel, email, address, workTime}) => {
+
   return (
     <>
       <h1>Контакты</h1>

@@ -3,21 +3,22 @@ import Home from './Home/Home.tsx';
 import About from './About/About.tsx';
 import Contacts from './Contacts/Contacts.tsx';
 import Toolbar from '../components/Toolbar/Toolbar.tsx';
-import {email, address, workTime, tel} from '../Constants.ts';
 import NotFound from './NotFound/NotFound.tsx';
 import Portfolio from './Portfolio/Portfolio.tsx';
 import BurgerApp from '../components/Burger/BurgerApp.tsx';
 import FindRingApp from '../components/FindRing/FindRingApp.tsx';
+import {email, address, workTime, tel} from '../Constants.ts';
+
 
 
 const App = () => {
 
   return (
     <>
-      <header>
+      <header className="mb-5">
         <Toolbar/>
       </header>
-      <main className="container mb-3">
+      <main className="container mb-5">
         <Routes>
           <Route path="/" element={(
             <Home/>

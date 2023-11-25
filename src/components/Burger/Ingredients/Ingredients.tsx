@@ -14,7 +14,7 @@ const Ingredients: React.FC<Props> = ({menu, addHandler, deleteHandler, count}) 
 
   return (
     <div className="Ingredients">
-      {menu.map((item, index) => <Ingredient
+      {menu.map((item: Filling, index: number) => <Ingredient
         key={index}
         name={item.name}
         image={item.image}
