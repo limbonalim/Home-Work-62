@@ -4,3 +4,8 @@ export  interface Data {
   title: string;
   message: string;
 }
+
+export interface Offices {
+  support: string;
+  main: string;
+}

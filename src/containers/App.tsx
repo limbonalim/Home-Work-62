@@ -1,32 +1,31 @@
 import Home from './Home/Home.tsx';
 import About from './About/About.tsx';
 import Contacts from './Contacts/Contacts.tsx';
+import Toolbar from '../components/Toolbar/Toolbar.tsx';
+import {email, address, workTime, tel} from '../Constants.ts';
+import {Route, Routes} from 'react-router-dom';
 
 
 const App = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-danger">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">InnovateHub</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-              <a className="nav-link" href="#">About us</a>
-              <a className="nav-link" href="#">Contacts</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div className="container">
-        {/*<About/>*/}
-        <Contacts/>
-        {/*<Home/>*/}
-      </div>
+      <header>
+        <Toolbar/>
+      </header>
+      <main className="container mb-3">
+        <Routes>
+          <Route path="/" element={(
+            <Home/>
+          )}/>
+          <Route path="/about" element={(
+            <About/>
+          )}/>
+          <Route path="/contacts" element={(
+            <Contacts address={address} email={email} tel={tel} workTime={workTime}/>
+          )}/>
+        </Routes>
+      </main>
     </>
   );
 };

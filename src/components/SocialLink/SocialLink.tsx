@@ -4,7 +4,7 @@ import Instagram from '../../assets/Social/Instagram.svg';
 import LinkedIn from '../../assets/Social/LinkedIn.svg';
 import Telegram from '../../assets/Social/Telegram.svg';
 import Twitter from '../../assets/Social/X(Twitter).svg';
-import './SocialLink.css'
+import './SocialLink.css';
 
 const SocialLink = () => {
   return (
